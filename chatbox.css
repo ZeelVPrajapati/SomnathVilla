@@ -107,18 +107,12 @@
 }
 
 @media (max-width: 899px) {
-	.big-screenm {
+	.left-contentm {
 		display: none;
-	}
-	.small-screenm {
-		display: block;
 	}
 }
 @media (min-width: 900px) {
-	.big-screenm {
+	.left-contentm {
 		display: block;
-	}
-	.small-screenm {
-		display: none;
 	}
 }
