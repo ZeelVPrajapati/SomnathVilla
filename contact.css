@@ -1,0 +1,266 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	background-color: #ffffff;
+}
+
+.banner {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(60, 71, 72, 0.411), rgb(8, 7, 7)),
+		url(aboutus.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar {
+	width: 85%;
+	margin: auto;
+	padding: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 97px;
+	cursor: pointer;
+	border-radius: 10%;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 22px;
+	position: relative;
+	margin: 10px 15px;
+	margin-left: 30px;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after {
+	content: "";
+	height: 3px;
+	width: 0;
+	background-color: #e3e5e5;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+.navbar .menu-button1 {
+	display: block; /* show on small screens */
+}
+
+@media screen and (min-width: 900px) {
+	.navbar .menu-button1 {
+		display: none; /* hide on big screens */
+	}
+}
+
+@media screen and (max-width: 899px) {
+	.hideOnMobile {
+		display: none !important; /* hide on small screens */
+	}
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 250px;
+	z-index: 999;
+	background-color: rgba(255, 255, 255, 0.172);
+	backdrop-filter: blur(20px);
+	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.content {
+	width: 100%;
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+}
+
+.content h1::after {
+	content: "";
+	background: #747478;
+	width: 100px;
+	height: 5px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.content {
+	transition: transform 0.5s ease-out;
+}
+
+.content h1 {
+	font-size: 80px;
+	margin-top: 80px;
+}
+
+.content p {
+	margin: 20px auto;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1 p {
+	font-family: sans-serif;
+	margin: 50px auto;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 600px;
+	position: relative;
+	color: #000000;
+}
+
+.l1 {
+	display: flex;
+	font-family: Arial, sans-serif;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+}
+
+.l2clearfix {
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+	max-width: 90%;
+}
+
+.l1 h1 {
+	text-align: center;
+}
+
+.image5 {
+	float: right;
+	margin: 20px;
+	transition: transform 0.6s ease-in-out;
+}
+
+.pp .image5 {
+	float: left;
+}
+
+.image5 img {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+}
+
+.image5 img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+	margin-top: 20px;
+}
+
+.button:hover {
+	background-color: #8fa2b6;
+}
+
+.l1clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.l2clearfix h2 {
+	margin-top: 2%;
+	margin-bottom: 1.5%;
+}
+
+.l2clearfix p {
+	margin-bottom: 2%;
+}
+/* Large screen styles */
+@media (min-width: 900px) {
+	.image5 {
+		width: 400px;
+		float: right;
+	}
+
+	.image5 img {
+		width: 350px;
+		height: 300px;
+	}
+
+	.l1 l2clearfix {
+		padding: 20px;
+		background-color: white;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		max-width: 90%;
+	}
+}
+
+/* Small screen styles */
+@media (max-width: 899px) {
+	.l1 {
+		flex-direction: column;
+		background-color: #f0f0f0;
+		text-align: center;
+	}
+
+	.l2clearfix {
+		padding: 10px;
+		margin: 20px auto;
+	}
+
+	.l1 h1 {
+		font-size: 2rem;
+	}
+
+	.l1 h2 {
+		font-size: 1.2rem;
+	}
+
+	.image5 img {
+		width: 100%;
+		height: auto;
+	}
+
+	.button {
+		margin-top: 10px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+.runingprojects {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+}
